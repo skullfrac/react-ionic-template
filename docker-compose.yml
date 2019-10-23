@@ -1,0 +1,28 @@
+version: '3.7'
+
+services:
+  reactionic:
+    build:
+      context: ./${SERVERNAME}
+      args:
+        NODEVERSION: ${NODEVERSION}
+        SERVERNAME: ${SERVERNAME}
+    expose:
+      - ${REACT_APP_PORT}
+    environment:
+      - PROTOCOL=${REACT_APP_PROTOCOL}
+      - HOST=${REACT_APP_HOST}
+      - PORT=${REACT_APP_PORT}
+    ports:
+      - ${REACT_APP_PORT}:${REACT_APP_PORT}
+    volumes:
+      - reactionic:/srv/app/testing
+    command: tail -f /dev/null
+
+volumes:
+  reactionic:
+    driver: local
+    driver_opts:
+      type: none
+      device: $PWD/${SERVERNAME}/scribble
+      o: bind

@@ -1,0 +1,32 @@
+{
+    "name": "reactionic",
+    "description": "a docker template",
+    "version": "0.0.1",
+    "author": "anonymous",
+    "license": "GPL3",
+    "main": "main.js",
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "dependencies": {
+        "@ionic/react": "^4.11.1",
+        "@types/jest": "^24.9.0",
+        "@types/react-redux": "^6.0.9",
+        "@types/react-router": "^5.0.2",
+        "@types/react-router-dom": "^4.3.4",
+        "react": "^16.8.6",
+        "ionicons": "^4.6.3",
+        "react-dom": "^16.8.6",
+        "react-redux": "^7.1.1",
+        "react-router": "^5.1.2",
+        "react-router-dom": "^5.1.2",
+        "react-scripts": "^3.0.1",
+        "redux": "^4.0.4",
+        "typesafe-actions": "^4.4.2",
+        "typescript": "^3.6.4
+    },
+    "devDependencies": {}
+}
