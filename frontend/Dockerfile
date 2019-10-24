@@ -1,8 +1,8 @@
 ARG NODEVERSION
 FROM node:${NODEVERSION}-alpine
-RUN npm install -g yarn
-
-
+RUN npm install -g \
+  yarn \
+  webpack
 
 ARG SERVERNAME
 ARG REACT_APP_PATH

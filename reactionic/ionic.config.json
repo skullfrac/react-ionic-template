@@ -1,7 +1,0 @@
-{
-    "name": "reactionic",
-    "type": "react",
-    "integrations": {
-        "cordova": {}
-    }
-}
