@@ -20,9 +20,9 @@ extensibility of the structure and docker-compose.
 add any files you want to load via Dockerfile here
 ```
 
-- scribble:
+- scribble(empty directory, needs to be created in `frontend`):
 ``` 
-contents of the generated container.
+contents of the generated container. bound to a docker volume
 ```
 
 ## Useful Links:
