@@ -24,4 +24,4 @@ RUN yes | npm run eject
 
 RUN npm i @babel/plugin-transform-react-jsx
 
-CMD tail -f /dev/null
+ENTRYPOINT ["npm", "run", "start"]

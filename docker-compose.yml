@@ -18,7 +18,7 @@ services:
       - ${REACT_APP_PORT}:${REACT_APP_PORT}
     volumes:
       - ${SERVERNAME}:/srv/app/${SERVERNAME}
-    command: tail -f /dev/null
+    command: npm run start
 
 volumes:
   frontend:
