@@ -21,4 +21,7 @@ RUN npm install @ionic/react \
 COPY ./resources/App.tsx ./App.tsx
 
 RUN yes | npm run eject
+
+RUN npm i @babel/plugin-transform-react-jsx
+
 CMD tail -f /dev/null

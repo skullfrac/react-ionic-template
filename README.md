@@ -6,8 +6,6 @@ This project is bootstrapped with
 This is a default,ejected webpack/react/ionic app inside a docker container awaiting
 further configuration. This template is meant as a pure frontend stack.
 
-###### Note:
-Webpack has to be configured accordingly to serve the app to `0.0.0.0`.
 
 ## Overview
 
