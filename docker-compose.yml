@@ -1,12 +1,13 @@
 version: '3.7'
 
 services:
-  reactionic:
+  frontend:
     build:
       context: ./${SERVERNAME}
       args:
         NODEVERSION: ${NODEVERSION}
         SERVERNAME: ${SERVERNAME}
+        REACT_APP_PATH: ${REACT_APP_PATH}
     expose:
       - ${REACT_APP_PORT}
     environment:
@@ -16,11 +17,11 @@ services:
     ports:
       - ${REACT_APP_PORT}:${REACT_APP_PORT}
     volumes:
-      - reactionic:/srv/app/testing
+      - ${SERVERNAME}:/srv/app/${SERVERNAME}
     command: tail -f /dev/null
 
 volumes:
-  reactionic:
+  frontend:
     driver: local
     driver_opts:
       type: none
