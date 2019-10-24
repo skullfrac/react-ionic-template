@@ -20,4 +20,5 @@ RUN npm install @ionic/react \
 
 COPY ./resources/App.tsx ./App.tsx
 
+RUN yes | npm run eject
 CMD tail -f /dev/null
