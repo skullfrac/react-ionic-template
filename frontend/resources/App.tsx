@@ -1,6 +1,6 @@
-import React, { Component } from react;
-import @ionic/core/css/core.css;
-import @ionic/core/css/ionic.bundle.css;
+import React, { Component } from 'react';
+import '@ionic/core/css/core.css';
+import '@ionic/core/css/ionic.bundle.css';
 import {
   IonApp,
   IonContent,
@@ -8,7 +8,7 @@ import {
   IonCardHeader,
   IonCardTitle,
   IonCardSubtitle
-} from @ionic/react;
+} from '@ionic/react';
 
 class App extends Component {
   render() {

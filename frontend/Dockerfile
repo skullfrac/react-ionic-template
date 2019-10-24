@@ -18,7 +18,7 @@ RUN npm install @ionic/react \
     @types/react-router \
     @types/react-router-dom
 
-COPY ./resources/App.tsx ./App.tsx
+COPY ./resources/App.tsx ./src/App.tsx
 
 RUN yes | npm run eject
 RUN \
