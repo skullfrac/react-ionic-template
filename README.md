@@ -31,3 +31,6 @@ contents of the generated container.
 - [Configure your own `create-react-app`](https://auth0.com/blog/how-to-configure-create-react-app/)
 - [Get started with react/ionic](https://ionicframework.com/blog/announcing-the-ionic-react-beta/)
 - [Boilerplate explained](https://enappd.com/blog/whats-new-in-ionic-react-rc/87/)
+
+## Credits to:
+- [Check it out](https://www.9lessons.info/2019/05/ionic-react-capacitor-mobile-applications.html)
