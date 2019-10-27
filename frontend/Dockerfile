@@ -18,8 +18,6 @@ RUN npm install @ionic/react \
     @types/react-router \
     @types/react-router-dom
 
-COPY ./resources/App.tsx ./src/App.tsx
-
 RUN yes | npm run eject
 RUN \
   rm -rf ./node-modules \
@@ -37,5 +35,18 @@ RUN npx cap add ios
 
 COPY ./resources/gitignore .gitignore
 RUN sed -i -e "s/node scripts\/build.js/node scripts\/build.js && npx cap sync/g" package.json
+
+RUN rm ${REACT_APP_PATH}/frontend/src/App.css \
+  && rm ${REACT_APP_PATH}/frontend/src/App.test.tsx \
+  && rm ${REACT_APP_PATH}/frontend/src/App.tsx \
+  && rm ${REACT_APP_PATH}/frontend/src/index.tsx
+
+RUN mkdir -p ${REACT_APP_PATH}/frontend/src/component \
+  && mkdir -p ${REACT_APP_PATH}/frontend/src/container/App \
+  && mkdir -p ${REACT_APP_PATH}/frontend/src/page/Home
+
+COPY ./resources/App.tsx ${REACT_APP_PATH}/frontend/src/container/App/index.tsx
+COPY ./resources/Home.tsx ${REACT_APP_PATH}/frontend/src/page/Home/index.tsx
+COPY ./resources/index.tsx ${REACT_APP_PATH}/frontend/src/index.tsx
 
 ENTRYPOINT ["npm", "run", "start"]
